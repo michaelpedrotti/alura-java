@@ -1,11 +1,13 @@
 package br.com.alura.ByteBank;
 
+import java.io.Serializable;
+
 /**
  * Classe base de conta do ByteBank
  * 
  * @author michael
  */
-public abstract class Conta {
+public abstract class Conta implements Serializable{
 
 	protected double saldo;
     private int agencia;

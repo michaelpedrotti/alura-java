@@ -1,5 +1,6 @@
 package br.com.alura.ByteBank;
 
+import java.io.Serializable;
 
 /**
  * Classe de um cliente do Bytebank
@@ -7,7 +8,9 @@ package br.com.alura.ByteBank;
  * @author michael
  * @version 0.1
  */
-public class Cliente  implements Autenticavel {
+public class Cliente  implements Autenticavel, Serializable {
+	
+	private static final long serialVersionUID = 1L;
 	private String nome;
 	private String cpf;
 	private String profissao;
