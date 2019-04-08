@@ -94,5 +94,8 @@ public class Serialize {
 			cc2.getTitular().getNome()
 		);
 		
+		// private transient Client titular
+		// Escapa o atributo de ser serializado
+		
 	}
 }
