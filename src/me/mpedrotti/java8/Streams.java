@@ -13,18 +13,18 @@ public class Streams {
 	public static void main(String[] args) {
 		
 		
-		List<Curso> cursos = new ArrayList<Curso>();
-		cursos.add(new Curso("Python", 45));
-		cursos.add(new Curso("JavaScript", 150));
-		cursos.add(new Curso("Java 8", 113));
-		cursos.add(new Curso("C", 55));
+		List<MyCurso> cursos = new ArrayList<MyCurso>();
+		cursos.add(new MyCurso("Python", 45));
+		cursos.add(new MyCurso("JavaScript", 150));
+		cursos.add(new MyCurso("Java 8", 113));
+		cursos.add(new MyCurso("C", 55));
 		
 		
-		cursos.sort(Comparator.comparing( (Curso c) -> {
+		cursos.sort(Comparator.comparing( (MyCurso c) -> {
 			return c.getAlunos();
 		}));
 
-		cursos.forEach( (Curso c) -> { 
+		cursos.forEach( (MyCurso c) -> { 
 			System.out.println(c.getNome());
 		});
 		
@@ -35,14 +35,14 @@ public class Streams {
 		
 		// Quais cursos possuem mais de 100 alunos
 		cursos.stream()
-			.filter( (Curso c) -> { return c.getAlunos() >= 100; })
-			.forEach( (Curso c) -> {  System.out.println(c.getNome()); });
+			.filter( (MyCurso c) -> { return c.getAlunos() >= 100; })
+			.forEach( (MyCurso c) -> {  System.out.println(c.getNome()); });
 		
 		System.out.println("----");
 		
 		cursos.stream()
-			.filter( (Curso c) -> { return c.getAlunos() >= 100; })
-			.map( (Curso c) -> {  return c.getAlunos(); });
+			.filter( (MyCurso c) -> { return c.getAlunos() >= 100; })
+			.map( (MyCurso c) -> {  return c.getAlunos(); });
 		
 		System.out.println("----");
 	}
